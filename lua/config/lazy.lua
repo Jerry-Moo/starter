@@ -32,6 +32,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.php" },
     -- lspconfig
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
+    { import = "lazyvim.plugins.extras.coding.copilot" },
     -- test
     { import = "lazyvim.plugins.extras.test.core" },
     { import = "plugins" },
