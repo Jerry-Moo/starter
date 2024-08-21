@@ -20,12 +20,11 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     -- ui
-    { import = "lazyvim.plugins.extras.ui.mini-animate" }, -- neovim 动画
+    -- { import = "lazyvim.plugins.extras.ui.mini-animate" }, -- neovim 动画
     -- language
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.lang.go" },
-    { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.tailwind" }, -- css
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.docker" },
@@ -33,6 +32,7 @@ require("lazy").setup({
     -- lspconfig
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     -- test
     { import = "lazyvim.plugins.extras.test.core" },
     { import = "plugins" },
