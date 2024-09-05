@@ -29,6 +29,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.python" },
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.php" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
     -- lspconfig
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
