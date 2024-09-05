@@ -32,7 +32,6 @@ require("lazy").setup({
     -- lspconfig
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     -- test
     { import = "lazyvim.plugins.extras.test.core" },
     { import = "plugins" },
