@@ -31,6 +31,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lsp.none-ls" },
     -- ai
     { import = "lazyvim.plugins.extras.ai.copilot" },
+    -- test
+    { import = "lazyvim.plugins.extras.test.core" },
     -- import/override with your plugins
     { import = "plugins" },
   },
