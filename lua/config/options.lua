@@ -16,3 +16,6 @@ vim.opt.colorcolumn = "120" -- Column highlight at textwidth's max character-lim
 
 -- Tabs And Indents
 vim.opt.textwidth = 100
+
+-- disable all animations
+vim.g.snacks_animate = false
