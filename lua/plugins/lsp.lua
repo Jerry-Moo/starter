@@ -14,7 +14,7 @@ return {
         lua = { "stylua" }, -- 使用 lua-language-server 作为格式化工具
         python = { "ruff" }, -- 使用 ruff 代替 black
         sh = { "shfmt" },
-        go = { "gopls" }, -- 使用 gopls 作为格式化工具
+        go = { "gofmt" }, -- 使用 gopls 作为格式化工具
         json = { "jsonls" },
         yaml = { "yamlls" },
         dockerfile = { "dockerls" },
@@ -46,6 +46,30 @@ return {
         "tailwindcss-language-server",
         -- 其他工具保留
         "shfmt",
+      },
+    },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    ---@class PluginLspOpts
+    opts = {
+      ---@type lspconfig.options
+      inlay_hints = {
+        enabled = false,
+        exclude = { "vue" }, -- filetypes for which you don't want to enable inlay hints
+      },
+      servers = {
+        vtsls = {},
+        lua_ls = {
+          mason = true,
+          enabled = false,
+        },
+        gopls = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern("go.work", "go.mod", ".git")(...)
+          end,
+        },
       },
     },
   },
