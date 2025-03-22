@@ -11,19 +11,17 @@ return {
         lsp_format = "fallback", -- not recommended to change
       },
       formatters_by_ft = {
-        lua = { "stylua" }, -- 使用 lua-language-server 作为格式化工具
+        lua = { "stylua" },
         python = { "ruff" }, -- 使用 ruff 代替 black
         sh = { "shfmt" },
-        go = { "gofmt" }, -- 使用 gopls 作为格式化工具
-        json = { "jsonls" },
-        yaml = { "yamlls" },
-        dockerfile = { "dockerls" },
-        docker_compose = { "docker_compose_language_service" },
-        typescript = { "vtsls" },
-        javascript = { "vtsls" },
-        php = { "phpactor" },
-        css = { "tailwindcss" }, -- 可以用于 Tailwind CSS 文件
-        html = { "tailwindcss" }, -- 如果你有使用 Tailwind 的 HTML 文件
+        go = { "gofmt" },
+        json = { "prettier" },
+        yaml = { "prettier" },
+        typescript = { "prettier" },
+        javascript = { "prettier" },
+        php = { "php-cs-fixer" },
+        css = { "prettier" },
+        html = { "prettier" },
       },
     },
   },
@@ -32,8 +30,14 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        -- 语言服务器
+        -- 格式化工具
         "stylua",
+        "gofmt",
+        "prettier",
+        "php-cs-fixer",
+        "ruff",
+        "shfmt",
+        -- 语言服务器
         "gopls",
         "json-lsp",
         "dockerfile-language-server",
@@ -41,11 +45,8 @@ return {
         "yaml-language-server",
         "vtsls",
         "pyright",
-        "ruff",
         "phpactor",
         "tailwindcss-language-server",
-        -- 其他工具保留
-        "shfmt",
       },
     },
   },
