@@ -32,7 +32,6 @@ return {
       ensure_installed = {
         -- 格式化工具
         "stylua",
-        "gofmt",
         "prettier",
         "php-cs-fixer",
         "ruff",
