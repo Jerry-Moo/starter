@@ -12,7 +12,7 @@ return {
       },
       formatters_by_ft = {
         lua = { "stylua" },
-        python = { "ruff" }, -- 使用 ruff 代替 black
+        -- python = { "ruff" }, -- 使用 ruff 代替 black
         sh = { "shfmt" },
         go = { "gofmt" },
         json = { "prettier" },
